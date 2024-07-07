@@ -10,7 +10,10 @@
 <body>
     <main>
         <h1>Tic-Tac-Toe Game</h1>
-        <p>WINNER</p>
+        <div class="mesg-container hide">
+            <p id="mesg">WINNER</p>
+        </div>
+        
         <div class="container">
             <div class="game">
          
@@ -27,8 +30,12 @@
         </div>
     </main>
 
+    <div class="sett">
     <button id="reset">Reset </button>
-    <button id="nw1">New Game </button>
+    <div class="mesg-container hide">
+        <button id="nw1">New Game </button>
+    </div>
+</div>
 
 
     <script src="file.js"></script>

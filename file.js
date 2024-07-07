@@ -1,5 +1,10 @@
 let boxes = document.querySelectorAll(".box")
 let resetBtn = document.querySelector("#reset")
+let newGameBtn = document.querySelector("#nw1")
+let container = document.querySelector(".mesg-container")
+let message = document.querySelector("#mesg")
+
+
 
 let turnO = true;
 
@@ -22,7 +27,10 @@ boxes.forEach((box)=>{
     })
     
 })
-
+const showWinner = (winner)=>{
+    message.innerText =`Congratulation, Winner is ${winner}`
+    container.classList.remove("hide")
+}
 const chckwinner=()=>{
     for(let patterns of winners){
         let pos1val =boxes[patterns[0]].innerText;
@@ -31,7 +39,8 @@ const chckwinner=()=>{
 
         if (pos1val!="" && pos2val!= ""&& pos3val!= "" ){
         if(pos1val == pos2val && pos2val== pos3val)
-            
+            console.log("winner",pos1val)
+        showWinner(pos1val)
         }
     }
    
