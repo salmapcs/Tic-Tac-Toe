@@ -16,11 +16,13 @@ boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
         console.log("button was clicked")
         if(turnO){
-         box.innerText= ("X")
+            // playerO
+         box.innerText= ("O")
          turnO =false;
         }
         else{
-            box.innerText =("O")
+            // playerX
+            box.innerText =("X")
             turnO=true;
         }
         box.disabled = true;
@@ -44,9 +46,10 @@ const enableboxes =()=>{
 }
 
 
-const showWinner = (winner)=>{
-    message.innerText =`Congratulation, Winner is ${winner}`
+const showWinner = (winners)=>{
+    message.innerText =`Congratulation, Winner is ${winners}`
     container.classList.remove("hide")
+    disableboxes()
 };
 
 const chckwinner=()=>{
@@ -55,7 +58,7 @@ const chckwinner=()=>{
         let pos2val =boxes[patterns[1]].innerText;
         let pos3val =boxes[patterns[2]].innerText;
 
-        if (pos1val!="" && pos2val!= ""&& pos3val!= "" ){
+        if (pos1val!="" && pos2val!= "" && pos3val!= "" ){
         if(pos1val === pos2val && pos2val=== pos3val){
             console.log("winner",pos1val)
             
