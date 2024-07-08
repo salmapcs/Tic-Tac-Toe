@@ -59,9 +59,7 @@ const chckwinner=()=>{
         let pos3val =boxes[patterns[2]].innerText;
 
         if (pos1val!="" && pos2val!= "" && pos3val!= "" ){
-        if(pos1val === pos2val && pos2val=== pos3val){
-            console.log("winner",pos1val)
-            
+        if(pos1val === pos2val && pos2val=== pos3val){   
             showWinner(pos1val)
 
         } 
